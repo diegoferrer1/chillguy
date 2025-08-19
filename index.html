@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chill Guy Burgers</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins para un look amigable -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+<link rel="shortcut icon" href="Logo.jpg" />
+    <!-- Iconos (Lucide Icons) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Usamos Poppins como la fuente principal para darle un toque moderno y amigable */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Pequeño efecto de gradiente en el fondo para un look más dinámico */
+        .gradient-bg {
+            background-color: #f3f4f6;
+            background-image: radial-gradient(circle at top right, #c7d2fe 0%, transparent 40%),
+                              radial-gradient(circle at bottom left, #fecaca 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="gradient-bg text-gray-800">
+
+    <!-- ========== HEADER ========== -->
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo y Nombre de la Tienda -->
+                <a href="index.html" class="flex items-center space-x-4">
+                    <!-- LOGO MÁS GRANDE -->
+                    <img src="logo.jpg" alt="Logo de Chill Guy Burgers" class="w-16 h-16 rounded-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1e1b4b/ffffff?text=CG';">
+                    <span class="text-xl font-bold tracking-tight text-indigo-900">Chill Guy Burgers</span>
+                </a>
+                
+                <!-- Navegación para Escritorio -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <nav class="flex space-x-8">
+                        <!-- ENLACE AL NUEVO MENU.HTML -->
+                        <a href="menu.html" class="font-semibold text-gray-600 hover:text-indigo-600 transition-colors">Menú</a>
+                        <a href="#nosotros" class="font-semibold text-gray-600 hover:text-indigo-600 transition-colors">Nosotros</a>
+                        <a href="#contacto" class="font-semibold text-gray-600 hover:text-indigo-600 transition-colors">Contacto</a>
+                    </nav>
+                    <a href="#" class="bg-indigo-600 text-white font-semibold px-5 py-2 rounded-full hover:bg-indigo-700 transition-all shadow-md hover:shadow-lg">
+                        Ordenar Ahora
+                    </a>
+                </div>
+
+                <!-- BOTÓN MENÚ HAMBURGUESA: Visible solo en móvil -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 hover:text-indigo-600 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MENÚ MÓVIL: Oculto por defecto, se muestra con JS -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md">
+            <nav class="flex flex-col items-center space-y-2 px-4 pt-2 pb-4">
+                <a href="menu.html" class="block w-full text-center py-2 font-semibold text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-md transition-colors">Menú</a>
+                <a href="#nosotros" class="block w-full text-center py-2 font-semibold text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-md transition-colors">Nosotros</a>
+                <a href="#contacto" class="block w-full text-center py-2 font-semibold text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-md transition-colors">Contacto</a>
+                <a href="#" class="block w-full text-center bg-indigo-600 text-white font-semibold px-5 py-2 mt-4 rounded-full hover:bg-indigo-700 transition-all shadow-md">
+                    Ordenar Ahora
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+
+        <!-- ========== SECCIÓN HERO ========== -->
+        <section class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-indigo-900 leading-tight">
+                Sabor que te hace <span class="text-indigo-600">sonreír</span>.
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+                En Chill Guy Burgers, cada hamburguesa es una obra de arte. Ingredientes frescos, recetas únicas y un montón de buena vibra.
+            </p>
+            <div class="mt-8 flex justify-center gap-4">
+                <a href="menu.html" class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Ver el Menú
+                </a>
+                <a href="#contacto" class="bg-white text-indigo-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 border border-gray-200">
+                    Contáctanos
+                </a>
+            </div>
+        </section>
+
+        <!-- ========== SECCIÓN NOSOTROS Y CONTACTO ========== -->
+        <section id="nosotros" class="mt-20 md:mt-32 bg-white/70 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Sobre Nosotros -->
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-indigo-900">Somos más que hamburguesas</h2>
+                    <p class="mt-4 text-gray-600">
+                        Chill Guy Burgers nació de un sueño: crear un lugar donde la comida sea increíble y el ambiente aún mejor. Somos una pequeña tienda en el corazón de Santiago de los Caballeros, apasionados por la calidad y el buen servicio.
+                    </p>
+                    <!-- MAPA DE GOOGLE INTEGRADO -->
+                    <div class="mt-6 rounded-xl shadow-md overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120395.55796078795!2d-70.75542642128077!3d19.43998833885756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb1c5c838e5899f%3A0x75d4b059b8768429!2sSantiago%20de%20los%20Caballeros!5e0!3m2!1ses-419!2sdo!4v1755565684900!5m2!1ses-419!2sdo" class="w-full h-80" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                
+                <!-- Información de Contacto -->
+                <div id="contacto" class="bg-indigo-50 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-indigo-800">¡Ven a visitarnos!</h3>
+                    <ul class="mt-6 space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-indigo-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Dirección</h4>
+                                <p class="text-gray-600">Santiago de los Caballeros, República Dominicana</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="phone" class="w-6 h-6 text-indigo-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Teléfono / WhatsApp</h4>
+                                <p class="text-gray-600">N/A</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="clock" class="w-6 h-6 text-indigo-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Horario</h4>
+                                <p class="text-gray-600">Lunes a Domingo: 12:00 PM - 11:00 PM</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-indigo-900 text-white mt-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+            <p>&copy; 2025 Chill Guy Burgers. Todos los derechos reservados.</p>
+            <p class="text-indigo-300 text-sm mt-1">Diseñado con ❤️ en Santiago</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- SCRIPT PARA EL MENÚ HAMBURGUESA ---
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            
+            if (isHidden) {
+                menuIcon.setAttribute('data-lucide', 'menu');
+            } else {
+                menuIcon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        lucide.createIcons();
+    </script>
+</body>
+</html>

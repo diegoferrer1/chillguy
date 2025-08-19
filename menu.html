@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Chill Guy Burgers</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos (Lucide Icons) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background-color: #f3f4f6;
+            background-image: radial-gradient(circle at top right, #c7d2fe 0%, transparent 40%),
+                              radial-gradient(circle at bottom left, #fecaca 0%, transparent 50%);
+        }
+        /* Estilo para el enlace activo en la navegación */
+        .nav-active {
+            color: #4f46e5; /* Indigo-600 */
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="gradient-bg text-gray-800">
+
+    <!-- ========== HEADER ========== -->
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo y Nombre de la Tienda -->
+                <a href="index.html" class="flex items-center space-x-4">
+                    <img src="logo.jpg" alt="Logo de Chill Guy Burgers" class="w-16 h-16 rounded-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1e1b4b/ffffff?text=CG';">
+                    <span class="text-xl font-bold tracking-tight text-indigo-900">Chill Guy Burgers</span>
+                </a>
+                
+                <!-- Navegación para Escritorio -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <nav class="flex space-x-8">
+                        <a href="menu.html" class="font-semibold text-gray-600 hover:text-indigo-600 transition-colors nav-active">Menú</a>
+                        <!-- Enlaces actualizados para volver a la página principal -->
+                        <a href="index.html#nosotros" class="font-semibold text-gray-600 hover:text-indigo-600 transition-colors">Nosotros</a>
+                        <a href="index.html#contacto" class="font-semibold text-gray-600 hover:text-indigo-600 transition-colors">Contacto</a>
+                    </nav>
+                    <a href="#" class="bg-indigo-600 text-white font-semibold px-5 py-2 rounded-full hover:bg-indigo-700 transition-all shadow-md hover:shadow-lg">
+                        Ordenar Ahora
+                    </a>
+                </div>
+
+                <!-- BOTÓN MENÚ HAMBURGUESA -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 hover:text-indigo-600 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MENÚ MÓVIL -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md">
+            <nav class="flex flex-col items-center space-y-2 px-4 pt-2 pb-4">
+                <a href="menu.html" class="block w-full text-center py-2 font-semibold text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-md transition-colors nav-active">Menú</a>
+                <a href="index.html#nosotros" class="block w-full text-center py-2 font-semibold text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-md transition-colors">Nosotros</a>
+                <a href="index.html#contacto" class="block w-full text-center py-2 font-semibold text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-md transition-colors">Contacto</a>
+                <a href="#" class="block w-full text-center bg-indigo-600 text-white font-semibold px-5 py-2 mt-4 rounded-full hover:bg-indigo-700 transition-all shadow-md">
+                    Ordenar Ahora
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+
+        <!-- ========== SECCIÓN MENÚ ========== -->
+        <section id="menu">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-indigo-900">Nuestro Menú</h1>
+                <p class="mt-2 text-gray-600">Todo preparado al momento con ingredientes frescos.</p>
+            </div>
+
+            <!-- Categoría: Hamburguesas -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-indigo-800 border-b-4 border-indigo-200 pb-2 mb-8">Hamburguesas</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Producto 1 -->
+                    <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1998&auto=format&fit=crop" alt="Foto de una hamburguesa clásica con queso" class="w-full h-48 object-cover rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-indigo-800">La Clásica Burger</h3>
+                        <p class="text-gray-500 mt-2">Carne de res, queso cheddar, lechuga, tomate y nuestra salsa secreta.</p>
+                        <p class="text-2xl font-bold text-indigo-600 mt-4">RD$ 525</p>
+                    </div>
+                    <!-- Producto 2 (IMAGEN ACTUALIZADA) -->
+                    <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?q=80&w=2069&auto=format&fit=crop" alt="Foto de una hamburguesa doble con tocineta" class="w-full h-48 object-cover rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-indigo-800">Bacon Deluxe Burger</h3>
+                        <p class="text-gray-500 mt-2">Doble carne, doble queso, y un montón de tocineta ahumada.</p>
+                        <p class="text-2xl font-bold text-indigo-600 mt-4">RD$ 740</p>
+                    </div>
+                    <!-- Producto 3 (IMAGEN ACTUALIZADA) -->
+                    <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?q=80&w=2120&auto=format&fit=crop" alt="Foto de una hamburguesa vegetariana con aguacate" class="w-full h-48 object-cover rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-indigo-800">Veggie Chill Burger</h3>
+                        <p class="text-gray-500 mt-2">Hamburguesa de lentejas y champiñones, aguacate, y mayonesa vegana.</p>
+                        <p class="text-2xl font-bold text-indigo-600 mt-4">RD$ 610</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoría: Sándwiches -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-indigo-800 border-b-4 border-indigo-200 pb-2 mb-8">Sándwiches</h2>
+                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Sándwich (IMAGEN ACTUALIZADA) -->
+                    <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=2070&auto=format&fit=crop" alt="Foto de un sándwich de pollo crujiente" class="w-full h-48 object-cover rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-indigo-800">Popcorn Chicken</h3>
+                        <p class="text-gray-500 mt-2">Pequeños trozos de pollo empanizados y fritos. </p>
+                        <p class="text-2xl font-bold text-indigo-600 mt-4">RD$ 550</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoría: Acompañantes y Bebidas -->
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-indigo-800 border-b-4 border-indigo-200 pb-2 mb-8">Acompañantes</h2>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-baseline"><span class="text-lg">Papas Fritas Clásicas</span> <span class="font-bold text-indigo-600">RD$ 175</span></li>
+                        <li class="flex justify-between items-baseline"><span class="text-lg">Aros de Cebolla</span> <span class="font-bold text-indigo-600">RD$ 260</span></li>
+                        <li class="flex justify-between items-baseline"><span class="text-lg">Ensalada de la Casa</span> <span class="font-bold text-indigo-600">RD$ 290</span></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h2 class="text-3xl font-bold text-indigo-800 border-b-4 border-indigo-200 pb-2 mb-8">Bebidas</h2>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-baseline"><span class="text-lg">Refrescos</span> <span class="font-bold text-indigo-600">RD$ 120</span></li>
+                        <li class="flex justify-between items-baseline"><span class="text-lg">Jugo Natural del Día</span> <span class="font-bold text-indigo-600">RD$ 200</span></li>
+                        <li class="flex justify-between items-baseline"><span class="text-lg">Agua Embotellada</span> <span class="font-bold text-indigo-600">RD$ 90</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-indigo-900 text-white mt-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+            <p>&copy; 2025 Chill Guy Burgers. Todos los derechos reservados.</p>
+            <p class="text-indigo-300 text-sm mt-1">Diseñado con ❤️ en Santiago</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- SCRIPT PARA EL MENÚ HAMBURGUESA ---
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            
+            if (isHidden) {
+                menuIcon.setAttribute('data-lucide', 'menu');
+            } else {
+                menuIcon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        lucide.createIcons();
+    </script>
+</body>
+</html>
